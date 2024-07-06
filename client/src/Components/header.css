@@ -1,0 +1,63 @@
+.logo {
+  /* font-size: 2em; */
+  color: orange;
+  margin-bottom: 5px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper div {
+  margin-top: 8px;
+}
+p {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p span {
+  font: 700 1.2em/1 "Oswald", sans-serif;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+  /* Clip Background Image */
+
+  background: url(../../public/animated-text-fill.png) repeat-y;
+  background-clip: text;
+
+  /* Animate Background Image */
+
+  -webkit-text-fill-color: transparent;
+  animation: aitf 80s linear infinite;
+
+  /* Activate hardware acceleration for smoother animations */
+
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper div {
+    font-size: 8px;
+    margin-top: 4px;
+  }
+}
+@media (max-width: 380px) {
+  .toolbar-root {
+    padding-left: 2px !important;
+    padding-right: 0px !important;
+  }
+}

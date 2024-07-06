@@ -1,0 +1,69 @@
+.effect3 {
+  position: relative;
+}
+.effect3:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.text-field p {
+  text-transform: initial;
+  letter-spacing: normal;
+}
+@media (max-height: 480px) {
+  .MuiOutlinedInput-input {
+    padding: 10.5px 14px !important;
+  }
+  .MuiInputLabel-root {
+    line-height: 1 !important;
+    font-size: 0.8em !important;
+  }
+  .effect3 {
+    flex-direction: row !important;
+    align-items: center !important;
+    height: 60px;
+  }
+  .effect-btn {
+    width: 25% !important;
+    line-height: 1.25 !important;
+    font-size: 0.75rem !important;
+    text-transform: none !important;
+  }
+  .text-field {
+    margin-top: 4px !important;
+  }
+  .text-field p {
+    font-size: 12px !important;
+    margin-top: 1px;
+  }
+  .auth button {
+    margin: 4px 0;
+  }
+  .panel .MuiBox-root {
+    padding: 0 !important;
+  }
+  .auth h5,
+  h1 {
+    display: none;
+  }
+  .auth {
+    margin-top: 0;
+  }
+  .MuiTableFooter-root .MuiToolbar-root {
+    min-height: 32px !important;
+  }
+}
