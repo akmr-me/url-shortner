@@ -1,0 +1,294 @@
+{
+  message: "::ffff:172.18.0.1 'GET / HTTP/1.1' 404 11 - 14.906 ms\n",
+  level: 'error',
+  timestamp: '08 07 2024 01:47:16'
+}
+{
+  message: "MONGODB connection Error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/",
+  level: 'error',
+  timestamp: '08 07 2024 01:47:24'
+}
+{
+  reason: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+      at Connection.openUri (/usr/src/app/node_modules/mongoose/lib/connection.js:807:32)
+      at /usr/src/app/node_modules/mongoose/lib/index.js:342:10
+      at /usr/src/app/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+      at new Promise (<anonymous>)
+      at promiseOrCallback (/usr/src/app/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+      at Mongoose._promiseOrCallback (/usr/src/app/node_modules/mongoose/lib/index.js:1181:10)
+      at Mongoose.connect (/usr/src/app/node_modules/mongoose/lib/index.js:341:20)
+      at connectDB (/usr/src/app/DB/mongoDB.js:25:12)
+      at Object.<anonymous> (/usr/src/app/app.js:17:22)
+      at Module._compile (node:internal/modules/cjs/loader:1467:14) {
+    reason: TopologyDescription {
+      type: 'ReplicaSetNoPrimary',
+      servers: Map(3) {
+        'cluster0-shard-00-00.sdnup.mongodb.net:27017' => ServerDescription {
+          _hostAddress: new HostAddress('cluster0-shard-00-00.sdnup.mongodb.net:27017'),
+          address: 'cluster0-shard-00-00.sdnup.mongodb.net:27017',
+          type: 'Unknown',
+          hosts: [],
+          passives: [],
+          arbiters: [],
+          tags: {},
+          minWireVersion: 0,
+          maxWireVersion: 0,
+          roundTripTime: -1,
+          lastUpdateTime: 18069729,
+          lastWriteDate: 0,
+          error: MongoNetworkError: F0319ADA217F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+          
+              at connectionFailureError (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:375:20)
+              at TLSSocket.<anonymous> (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:295:22)
+              at Object.onceWrapper (node:events:635:26)
+              at TLSSocket.emit (node:events:520:28)
+              at emitErrorNT (node:internal/streams/destroy:170:8)
+              at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+              at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+            [Symbol(errorLabels)]: Set(0) {}
+          }
+        },
+        'cluster0-shard-00-01.sdnup.mongodb.net:27017' => ServerDescription {
+          _hostAddress: new HostAddress('cluster0-shard-00-01.sdnup.mongodb.net:27017'),
+          address: 'cluster0-shard-00-01.sdnup.mongodb.net:27017',
+          type: 'Unknown',
+          hosts: [],
+          passives: [],
+          arbiters: [],
+          tags: {},
+          minWireVersion: 0,
+          maxWireVersion: 0,
+          roundTripTime: -1,
+          lastUpdateTime: 18068583,
+          lastWriteDate: 0,
+          error: MongoNetworkError: F0319ADA217F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+          
+              at connectionFailureError (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:375:20)
+              at TLSSocket.<anonymous> (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:295:22)
+              at Object.onceWrapper (node:events:635:26)
+              at TLSSocket.emit (node:events:520:28)
+              at emitErrorNT (node:internal/streams/destroy:170:8)
+              at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+              at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+            [Symbol(errorLabels)]: Set(0) {}
+          }
+        },
+        'cluster0-shard-00-02.sdnup.mongodb.net:27017' => ServerDescription {
+          _hostAddress: new HostAddress('cluster0-shard-00-02.sdnup.mongodb.net:27017'),
+          address: 'cluster0-shard-00-02.sdnup.mongodb.net:27017',
+          type: 'Unknown',
+          hosts: [],
+          passives: [],
+          arbiters: [],
+          tags: {},
+          minWireVersion: 0,
+          maxWireVersion: 0,
+          roundTripTime: -1,
+          lastUpdateTime: 18069740,
+          lastWriteDate: 0,
+          error: MongoNetworkError: F0319ADA217F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+          
+              at connectionFailureError (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:375:20)
+              at TLSSocket.<anonymous> (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:295:22)
+              at Object.onceWrapper (node:events:635:26)
+              at TLSSocket.emit (node:events:520:28)
+              at emitErrorNT (node:internal/streams/destroy:170:8)
+              at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+              at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+            [Symbol(errorLabels)]: Set(0) {}
+          }
+        }
+      },
+      stale: false,
+      compatible: true,
+      heartbeatFrequencyMS: 10000,
+      localThresholdMS: 15,
+      setName: 'atlas-pxcnqe-shard-0',
+      logicalSessionTimeoutMinutes: undefined
+    },
+    code: undefined
+  },
+  message: 'Unhadnled Rejection at Promise',
+  promise: Promise {
+    <rejected> MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Connection.openUri (/usr/src/app/node_modules/mongoose/lib/connection.js:807:32)
+        at /usr/src/app/node_modules/mongoose/lib/index.js:342:10
+        at /usr/src/app/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/usr/src/app/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at Mongoose._promiseOrCallback (/usr/src/app/node_modules/mongoose/lib/index.js:1181:10)
+        at Mongoose.connect (/usr/src/app/node_modules/mongoose/lib/index.js:341:20)
+        at connectDB (/usr/src/app/DB/mongoDB.js:25:12)
+        at Object.<anonymous> (/usr/src/app/app.js:17:22)
+        at Module._compile (node:internal/modules/cjs/loader:1467:14) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-00.sdnup.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.sdnup.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.sdnup.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 18069729,
+            lastWriteDate: 0,
+            error: MongoNetworkError: F0319ADA217F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+            
+                at connectionFailureError (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:375:20)
+                at TLSSocket.<anonymous> (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:295:22)
+                at Object.onceWrapper (node:events:635:26)
+                at TLSSocket.emit (node:events:520:28)
+                at emitErrorNT (node:internal/streams/destroy:170:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+                at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.sdnup.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.sdnup.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.sdnup.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 18068583,
+            lastWriteDate: 0,
+            error: MongoNetworkError: F0319ADA217F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+            
+                at connectionFailureError (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:375:20)
+                at TLSSocket.<anonymous> (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:295:22)
+                at Object.onceWrapper (node:events:635:26)
+                at TLSSocket.emit (node:events:520:28)
+                at emitErrorNT (node:internal/streams/destroy:170:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+                at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-02.sdnup.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.sdnup.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.sdnup.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 18069740,
+            lastWriteDate: 0,
+            error: MongoNetworkError: F0319ADA217F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+            
+                at connectionFailureError (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:375:20)
+                at TLSSocket.<anonymous> (/usr/src/app/node_modules/mongodb/lib/cmap/connect.js:295:22)
+                at Object.onceWrapper (node:events:635:26)
+                at TLSSocket.emit (node:events:520:28)
+                at emitErrorNT (node:internal/streams/destroy:170:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+                at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-pxcnqe-shard-0',
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '08 07 2024 01:47:24'
+}
+{
+  reason: MongooseError: Operation `shorturls.findOne()` buffering timed out after 10000ms
+      at Timeout.<anonymous> (/usr/src/app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7),
+  message: 'Unhadnled Rejection at Promise',
+  promise: Promise {
+    <rejected> MongooseError: Operation `shorturls.findOne()` buffering timed out after 10000ms
+        at Timeout.<anonymous> (/usr/src/app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+        at listOnTimeout (node:internal/timers:581:17)
+        at process.processTimers (node:internal/timers:519:7)
+  },
+  level: 'error',
+  timestamp: '08 07 2024 01:47:27'
+}
+{
+  message: "::ffff:172.18.0.1 'GET /refresh HTTP/1.1' 401 18 - 1.024 ms\n",
+  level: 'error',
+  timestamp: '08 07 2024 01:48:49'
+}
+{
+  message: "::ffff:172.18.0.1 'GET /refresh HTTP/1.1' 401 18 - 0.779 ms\n",
+  level: 'error',
+  timestamp: '08 07 2024 01:48:49'
+}
+{
+  reason: MongooseError: Operation `shorturls.findOne()` buffering timed out after 10000ms
+      at Timeout.<anonymous> (/usr/src/app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7),
+  message: 'Unhadnled Rejection at Promise',
+  promise: Promise {
+    <rejected> MongooseError: Operation `shorturls.findOne()` buffering timed out after 10000ms
+        at Timeout.<anonymous> (/usr/src/app/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+        at listOnTimeout (node:internal/timers:581:17)
+        at process.processTimers (node:internal/timers:519:7)
+  },
+  level: 'error',
+  timestamp: '08 07 2024 01:49:43'
+}
+[31m{[39m
+[31m  reason: MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.[39m
+[31m      at Connection.openUri (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\connection.js:689:11)[39m
+[31m      at C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\index.js:342:10[39m
+[31m      at C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5[39m
+[31m      at new Promise (<anonymous>)[39m
+[31m      at promiseOrCallback (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)[39m
+[31m      at Mongoose._promiseOrCallback (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\index.js:1181:10)[39m
+[31m      at Mongoose.connect (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\index.js:341:20)[39m
+[31m      at connectDB (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\DB\mongoDB.js:25:12)[39m
+[31m      at Object.<anonymous> (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\app.js:17:22)[39m
+[31m      at Module._compile (node:internal/modules/cjs/loader:1376:14),[39m
+[31m  message: 'Unhadnled Rejection at Promise',[39m
+[31m  promise: Promise {[39m
+[31m    <rejected> MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.[39m
+[31m        at Connection.openUri (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\connection.js:689:11)[39m
+[31m        at C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\index.js:342:10[39m
+[31m        at C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5[39m
+[31m        at new Promise (<anonymous>)[39m
+[31m        at promiseOrCallback (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)[39m
+[31m        at Mongoose._promiseOrCallback (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\index.js:1181:10)[39m
+[31m        at Mongoose.connect (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\node_modules\mongoose\lib\index.js:341:20)[39m
+[31m        at connectDB (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\DB\mongoDB.js:25:12)[39m
+[31m        at Object.<anonymous> (C:\Users\ASUS\Desktop\Dockarize Project\url_shortner\server\app.js:17:22)[39m
+[31m        at Module._compile (node:internal/modules/cjs/loader:1376:14)[39m
+[31m  },[39m
+[31m  level: 'error',[39m
+[31m  timestamp: '08 07 2024 09:43:56'[39m
+[31m}[39m
+{
+  message: "::1 'GET / HTTP/1.1' 404 11 - 3.715 ms\n",
+  level: 'error',
+  timestamp: '08 07 2024 10:05:58'
+}
+{
+  message: "::1 'GET /favicon.ico HTTP/1.1' 404 20 - 80.587 ms\n",
+  level: 'error',
+  timestamp: '08 07 2024 10:05:58'
+}

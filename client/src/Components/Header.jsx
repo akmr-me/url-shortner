@@ -57,7 +57,7 @@ export default function Header() {
           </Typography>
           <div>
             <p>
-              <span> URL shortner</span>
+              <span> URL shortner!!</span>
               &mdash; Trim Your URL &mdash;
             </p>
           </div>

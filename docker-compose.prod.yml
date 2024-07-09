@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  url-shortner-client-production:
+    image: url-shortner-client-production:${ENV}
+    # not build since we will have image ready in production
+    restart: unless-stopped
+    # stdin_open: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/nginx/conf.d/:/etc/nginx/conf.d/
+      # - ./html/index.html:/var/www/html/index.html
+      #- /etc/letsencrypt:/etc/letsencrypt
+    networks:
+      - url-shortner-production
+  url-shortner-server-production:
+    image: url-shortner-server-production:${ENV}
+    restart: unless-stopped
+    env_file:
+      - ./server/${ENV}.env
+    ports:
+      - "4001:4001"
+    networks:
+      - url-shortner-production
+networks:
+  url-shortner-production:
+    driver: bridge

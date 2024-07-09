@@ -1,5 +1,8 @@
 const whitelist = [
-  "http://localhost:4002",
+  "http://localhost:4000",
+  "http://localhost:4001",
+  "http://localhost:80",
+  "http://localhost",
   "http://127.0.0.1:8080",
   "https://www.akmr.me",
 ];

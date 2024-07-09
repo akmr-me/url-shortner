@@ -1,0 +1,28 @@
+# Stage I
+FROM node:22-alpine3.19 AS builder
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+# copy into nginx
+
+# Stage II
+
+FROM nginx:latest
+# Arg available during build time env available in container
+ARG NGINXCONF
+
+COPY ${NGINXCONF} /etc/nginx/conf.d/
+
+COPY --from=builder /usr/src/app/build/ /usr/share/nginx/html
+
+EXPOSE 80
+
+# EXPOSE 443
