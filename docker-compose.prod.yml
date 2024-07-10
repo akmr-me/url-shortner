@@ -9,9 +9,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /etc/nginx/conf.d/:/etc/nginx/conf.d/
+#      - ./conf:/etc/nginx/conf.d/
       # - ./html/index.html:/var/www/html/index.html
-      #- /etc/letsencrypt:/etc/letsencrypt
+      - /etc/letsencrypt:/etc/letsencrypt
     networks:
       - url-shortner-production
   url-shortner-server-production:

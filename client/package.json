@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4001",
+  "proxy": "http://www.akmr.me",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dbuild": "sudo docker build -t url-shortner-client-production:production --build-arg NGINXCONF=nginx.prod.conf --build-arg REACT_APP_URL=http://akmr.me/ -f Dockerfile.production ."
   },
   "eslintConfig": {
     "extends": [

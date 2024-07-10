@@ -4,7 +4,8 @@ const whitelist = [
   "http://localhost:80",
   "http://localhost",
   "http://127.0.0.1:8080",
-  "https://www.akmr.me",
+  "http://www.akmr.me",
+  "http://akmr.me"
 ];
 
 const corsOptionsDelegate = function (req, callback) {
